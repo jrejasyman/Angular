@@ -1,0 +1,38 @@
+<div>
+    <h3>{{heroeName}}</h3>
+    <hr>
+<div>
+    <span>Nombre Real: </span>
+    <span>{{realName}}</span>
+</div>
+
+<div>
+    <span>Edad: </span>
+    <span>{{age}}</span>
+</div>
+
+<div>
+    <span>Pais: </span>
+    <span>{{country}}</span>
+</div>
+
+<div>
+    <span>Nombre mayuscula: </span>
+    <span>{{nameUppercase}}</span>
+</div>
+
+<div>
+    <span>Alguna funcion: </span>
+    <span>{{anyFunction ()}}</span>
+</div>
+<br>
+<button *ngIf="heroeName ==='Spiderman'"
+ (click)="changeHeroe()" type="button" class="btn btn-primary">Cambiar heroe</button>
+</div>
+
+<ul class="list-group pt-4">
+    <li *ngFor="let heroe of heroes" class="list-group-item">
+        {{heroe}}
+        <button type="button" (click)="changeHeroList(heroe)" class="btn btn-outline-warning">Ver</button>
+    </li>
+  </ul>
